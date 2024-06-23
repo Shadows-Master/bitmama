@@ -9,12 +9,14 @@ import '../../constants/app_dimens.dart';
 enum _ButtonType {
   primary,
   secondary,
+  success,
 }
 
 class AppButton extends StatelessWidget {
   final String title;
   final IconData? icon;
   final bool? isLoading;
+  final double? radius;
   final VoidCallback? onPressed;
   final _ButtonType _buttonType;
 
@@ -24,6 +26,7 @@ class AppButton extends StatelessWidget {
     this.icon,
     this.onPressed,
     this.isLoading = false,
+    this.radius,
   }) : _buttonType = _ButtonType.primary;
 
   const AppButton.secondary({
@@ -32,8 +35,17 @@ class AppButton extends StatelessWidget {
     this.icon,
     this.onPressed,
     this.isLoading = false,
+    this.radius,
   }) : _buttonType = _ButtonType.secondary;
 
+  const AppButton.success({
+    super.key,
+    required this.title,
+    this.icon,
+    this.onPressed,
+    this.isLoading = false,
+    this.radius,
+  }) : _buttonType = _ButtonType.success;
   @override
   Widget build(BuildContext context) {
     late Color bgColor;
@@ -48,6 +60,9 @@ class AppButton extends StatelessWidget {
         bgColor = context.colorScheme.secondary;
         fgColor = context.colorScheme.onSecondary;
         break;
+      case _ButtonType.success:
+        bgColor = const Color(0xff35B760);
+        fgColor = const Color(0xff35B760);
     }
 
     return SizedBox(
@@ -60,7 +75,9 @@ class AppButton extends StatelessWidget {
           foregroundColor: fgColor,
           elevation: 3,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppDimens.borderRadius),
+            borderRadius: BorderRadius.circular(
+              radius ?? AppDimens.borderRadius,
+            ),
             side: const BorderSide(
               width: 0.0,
               color: Colors.transparent,
@@ -72,7 +89,10 @@ class AppButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (icon != null) ...[
-              Icon(icon!, color: context.colorScheme.surface,),
+              Icon(
+                icon!,
+                color: context.colorScheme.surface,
+              ),
               Expanded(
                 child: (isLoading == true)
                     ? SpinKitRipple(

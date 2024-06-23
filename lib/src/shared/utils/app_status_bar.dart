@@ -10,13 +10,13 @@ class AppStatusBar {
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
         statusBarBrightness:
-            themeMode == ThemeMode.dark ? Brightness.light : Brightness.dark,
+        themeMode == ThemeMode.dark ? Brightness.light : Brightness.dark,
         statusBarColor: Colors.transparent,
         statusBarIconBrightness:
-            themeMode == ThemeMode.dark ? Brightness.light : Brightness.dark,
+        themeMode == ThemeMode.dark ? Brightness.light : Brightness.dark,
       ),
     );
   }
 }
 
-final AppStatusBar appStatusBar = AppStatusBar();
+final  appStatusBar = Provider((ref) => AppStatusBar());

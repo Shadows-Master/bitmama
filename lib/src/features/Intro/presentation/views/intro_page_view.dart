@@ -1,9 +1,9 @@
-import 'dart:developer';
-
 import 'package:awesome_extensions/awesome_extensions.dart';
+import 'package:bitmama/src/core/routing/app_router.dart';
 import 'package:bitmama/src/shared/extensions/app_context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../generated/assets.gen.dart';
 import '../../../../shared/components/app_title.dart';
@@ -35,7 +35,7 @@ class IntroPageView extends ConsumerWidget {
               color: context.colorScheme.scrim,
             ),
             color: indexValue == index
-                ? context.colorScheme.primary
+                ? const Color(0xff35B760)
                 : Colors.grey.shade100,
           ),
         ),
@@ -58,13 +58,12 @@ class IntroPageView extends ConsumerWidget {
           children: [
             (AppDimens.tripleSpacing * 2).heightBox,
             if (currentIndex < steps.length - 1)
-              const AppTitle(title: "Skip").alignAtTopRight()
-                ..onTap(() {
-                  pageController.jumpToPage(steps.length - 1);
-                }),
+              const AppTitle(title: "Skip").alignAtTopRight().onTap(() {
+                pageController.jumpToPage(steps.length - 1);
+              }),
             (AppDimens.tripleSpacing * 2).heightBox,
             Assets.images.logo.image().alignAtCenter(),
-            (AppDimens.tripleSpacing * 2).heightBox,
+            (AppDimens.tripleSpacing * 1.2).heightBox,
             PageView(
               controller: pageController,
               children: List.generate(
@@ -100,18 +99,15 @@ class IntroPageView extends ConsumerWidget {
                 ref
                     .read(introPaginateProvider.notifier)
                     .update((state) => value);
-                log("index ===> $currentIndex");
               },
             ).expanded(flex: 6),
             dot(steps.length, index: currentIndex),
             if (currentIndex == steps.length - 1)
-              AppButton(
+              AppButton.success(
                 title: "Get Started",
                 onPressed: () {
-                  pageController.previousPage(
-                    duration: const Duration(microseconds: 5),
-                    curve: Curves.bounceIn,
-                  );
+                  ref.read(introStateProvider.notifier).completedIntro();
+                  if (context.mounted) context.goNamed(AppRoutes.wallet.name);
                 },
               ),
             const Spacer(),
