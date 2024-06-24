@@ -41,7 +41,7 @@ class AppFormIcon extends StatelessWidget {
             left: !isRight ? AppDimens.spacing : 0,
           ) ??
           AppTitle(title: text ?? "").paddingOnly(
-            right: AppDimens.spacing,
+            left: AppDimens.spacing,
           ),
     ).paddingSymmetric(
       horizontal: AppDimens.padding,

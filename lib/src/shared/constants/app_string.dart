@@ -45,5 +45,8 @@ class AppString {
   static const String depositLink  = "Deposit Link ";
   static const String receiveMoney  = "Receive Money";
   static const String receiveMoneySubtitle  = "Share your deposit link to receive USD or crypto from  anyone.";
+  static const String withdraw  = "Withdraw";
+  static const String withdrawUsdt  = "Withdraw USDT";
+  static const String withdrawSubtitle  = "You have ${1.00} USDT available";
 }
 

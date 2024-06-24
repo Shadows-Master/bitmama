@@ -39,3 +39,5 @@ extension ActionIconExtension on ActionIcon? {
 }
 
 final actionProvider = StateProvider<IconAction?>((ref) => null);
+final isActionReceiveProvider =  StateProvider<bool>((ref) => false);
+final isActionSendProvider =  StateProvider<bool>((ref) => false);

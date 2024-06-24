@@ -18,7 +18,7 @@ class AppHelpers {
   AppHelpers._();
 
   static showAlert({required BuildContext context, required Widget child}) {
-    return showAdaptiveDialog(
+    return showDialog(
       context: context,
       builder: (context) {
         return child;

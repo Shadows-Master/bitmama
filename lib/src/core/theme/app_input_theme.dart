@@ -12,11 +12,11 @@ class AppInputTheme {
     return InputDecorationTheme(
       border: _outlineInputBorder(colorScheme.secondary),
       focusedBorder: _outlineInputBorder(
-        AppColorsScheme.lightColorScheme.secondary,
+        AppColorsScheme.lightColorScheme.onSurface,
       ),
       errorBorder: _outlineInputBorder(colorScheme.error),
       enabledBorder: _outlineInputBorder(
-        colorScheme.secondary,
+        colorScheme.onSurface,
       ),
       contentPadding: const EdgeInsets.symmetric(
         horizontal: AppDimens.spacing,
@@ -30,7 +30,7 @@ class AppInputTheme {
       borderRadius: BorderRadius.circular(AppDimens.borderRadius),
       borderSide: BorderSide(
         color: color,
-        width: .71,
+        width: .91,
       ),
       gapPadding: 12,
     );

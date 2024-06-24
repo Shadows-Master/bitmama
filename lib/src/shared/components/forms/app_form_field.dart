@@ -80,7 +80,7 @@ class AppFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       style: context.headlineMedium?.copyWith(
-        color: context.colorScheme.tertiary,
+        color: context.colorScheme.primary,
       ),
       autofocus: autoFocus!,
       textCapitalization: textCapitalization,
@@ -107,7 +107,7 @@ class AppFormField extends StatelessWidget {
         helperText: helperText,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        fillColor: context.colorScheme.surface,
+        fillColor: Colors.white,
         filled: isFilled,
         prefix: prefix,
         prefixText: prefixText,
@@ -116,8 +116,8 @@ class AppFormField extends StatelessWidget {
         hintText: hintText,
         counterText: "",
         prefixStyle: context.headlineSmall,
-        hintStyle: context.headlineSmall?.copyWith(
-          color: context.colorScheme.secondary.withOpacity(.3),
+        hintStyle: context.headlineMedium?.copyWith(
+          color: context.colorScheme.onSurface,
         ),
         labelStyle: context.headlineMedium?.copyWith(
           color: context.colorScheme.secondary,

@@ -39,6 +39,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/chevron-left.svg
   SvgGenImage get chevronLeft => const SvgGenImage('assets/icons/chevron-left.svg');
 
+  /// File path: assets/icons/close.svg
+  SvgGenImage get close => const SvgGenImage('assets/icons/close.svg');
+
   /// File path: assets/icons/copy.svg
   SvgGenImage get copy => const SvgGenImage('assets/icons/copy.svg');
 
@@ -50,6 +53,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/group.svg
   SvgGenImage get group => const SvgGenImage('assets/icons/group.svg');
+
+  /// File path: assets/icons/maximize.svg
+  SvgGenImage get maximize => const SvgGenImage('assets/icons/maximize.svg');
 
   /// File path: assets/icons/money-bag.svg
   SvgGenImage get moneyBag => const SvgGenImage('assets/icons/money-bag.svg');
@@ -65,6 +71,12 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
+
+  /// File path: assets/icons/profil.svg
+  SvgGenImage get profil => const SvgGenImage('assets/icons/profil.svg');
+
+  /// File path: assets/icons/profile.svg
+  SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
   /// File path: assets/icons/receipt-text.svg
   SvgGenImage get receiptText => const SvgGenImage('assets/icons/receipt-text.svg');
@@ -94,15 +106,19 @@ class $AssetsIconsGen {
         check,
         chevronDown,
         chevronLeft,
+        close,
         copy,
         ethereumEth,
         eye,
         group,
+        maximize,
         moneyBag,
         moneyRecive,
         moneys,
         officeWorker,
         plus,
+        profil,
+        profile,
         receiptText,
         swap,
         time,

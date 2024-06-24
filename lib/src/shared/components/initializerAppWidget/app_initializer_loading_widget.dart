@@ -8,8 +8,6 @@ import '../../../core/theme/app_theme.dart';
 import '../../constants/app_dimens.dart';
 import '../app_title.dart';
 
-
-
 class AppInitializerLoadingWidget extends ConsumerWidget {
   const AppInitializerLoadingWidget({super.key});
 
@@ -19,12 +17,15 @@ class AppInitializerLoadingWidget extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SpinKitRipple(color: context.colorScheme.surface, size: AppDimens.doubleIconSize,),
+            SpinKitRipple(
+              color: context.colorScheme.surface,
+              size: AppDimens.doubleIconSize,
+            ),
             AppDimens.tripleSpacing.heightBox,
             AppTitle.h4(
               title: "Initializing...",

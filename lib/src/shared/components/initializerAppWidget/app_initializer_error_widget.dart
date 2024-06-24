@@ -33,6 +33,7 @@ class AppInitializerErrorWidget extends ConsumerWidget {
           children: [
             Material(
               elevation: 25.0,
+              color: Colors.transparent,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(
                   AppDimens.borderRadius,

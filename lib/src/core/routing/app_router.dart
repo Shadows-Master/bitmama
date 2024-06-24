@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bitmama/src/features/Account/presentations/views/account_page_view.dart';
+import 'package:bitmama/src/features/Otp/presentation/views/otp_page_view.dart';
 import 'package:bitmama/src/features/Payments/presentations/views/payment_page_view.dart';
 import 'package:bitmama/src/features/Sells/presentations/views/sell_page_view.dart';
 import 'package:bitmama/src/features/Wallets/presentations/views/WalletAddress/presentation/views/wallet_address_page_view.dart';
@@ -24,8 +25,7 @@ final _accountNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'account');
 
 enum AppRoutes {
   intro,
-  authenticate,
-  emailVerify,
+  otp,
   home,
   wallet,
   walletAddress,
@@ -123,6 +123,14 @@ GoRouter appRouter(AppRouterRef ref) {
         parentNavigatorKey: _rootNavigatorKey,
         pageBuilder: (context, state) {
           return const NoTransitionPage(child: WalletAddressPageView());
+        },
+      ),
+      GoRoute(
+        path: '/otp',
+        name: AppRoutes.otp.name,
+        parentNavigatorKey: _rootNavigatorKey,
+        pageBuilder: (context, state) {
+          return NoTransitionPage(child: OtpPageView());
         },
       ),
     ],
