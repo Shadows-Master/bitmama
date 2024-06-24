@@ -32,7 +32,7 @@ class CryptoBox extends StatelessWidget {
         children: [
           cryptoImage ?? Assets.icons.bitcoinBtc.svg(),
            AppTitle(
-            title: cryptoTitle ?? AppString.trendingBtc,
+            title: cryptoTitle ?? AppString.btc,
             color: Colors.white,
           )
         ],

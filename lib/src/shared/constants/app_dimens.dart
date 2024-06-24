@@ -23,7 +23,7 @@ class AppDimens {
   static const double halfPadding = 8.0;
   static const double doublePadding = 32.0;
 
-  static const double btnSize = 50;
+  static const double btnSize = 53.5;
 
   static const double xsContainerSize = 25.0;
   static const double smContainerSize = 50.0;

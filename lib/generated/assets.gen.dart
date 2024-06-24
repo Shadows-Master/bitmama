@@ -33,6 +33,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/check.svg
   SvgGenImage get check => const SvgGenImage('assets/icons/check.svg');
 
+  /// File path: assets/icons/chevron-down.svg
+  SvgGenImage get chevronDown => const SvgGenImage('assets/icons/chevron-down.svg');
+
+  /// File path: assets/icons/chevron-left.svg
+  SvgGenImage get chevronLeft => const SvgGenImage('assets/icons/chevron-left.svg');
+
+  /// File path: assets/icons/copy.svg
+  SvgGenImage get copy => const SvgGenImage('assets/icons/copy.svg');
+
   /// File path: assets/icons/ethereum-eth.svg
   SvgGenImage get ethereumEth => const SvgGenImage('assets/icons/ethereum-eth.svg');
 
@@ -50,6 +59,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/moneys.svg
   SvgGenImage get moneys => const SvgGenImage('assets/icons/moneys.svg');
+
+  /// File path: assets/icons/office-worker.svg
+  SvgGenImage get officeWorker => const SvgGenImage('assets/icons/office-worker.svg');
 
   /// File path: assets/icons/plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
@@ -80,12 +92,16 @@ class $AssetsIconsGen {
         bitcoinBtc,
         cardSend,
         check,
+        chevronDown,
+        chevronLeft,
+        copy,
         ethereumEth,
         eye,
         group,
         moneyBag,
         moneyRecive,
         moneys,
+        officeWorker,
         plus,
         receiptText,
         swap,
@@ -108,6 +124,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/no-files.png
   AssetGenImage get noFiles => const AssetGenImage('assets/images/no-files.png');
 
+  /// File path: assets/images/office-worker.png
+  AssetGenImage get officeWorker => const AssetGenImage('assets/images/office-worker.png');
+
   /// File path: assets/images/onboard-3.png
   AssetGenImage get onboard3 => const AssetGenImage('assets/images/onboard-3.png');
 
@@ -115,7 +134,7 @@ class $AssetsImagesGen {
   AssetGenImage get wallet1 => const AssetGenImage('assets/images/wallet-1.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bitcoinPana, logo, noFiles, onboard3, wallet1];
+  List<AssetGenImage> get values => [bitcoinPana, logo, noFiles, officeWorker, onboard3, wallet1];
 }
 
 class Assets {

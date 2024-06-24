@@ -1,3 +1,4 @@
+import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../generated/assets.gen.dart';
@@ -41,7 +42,7 @@ class AppAlertDialog extends StatelessWidget {
         description = message;
         break;
       case _AppAlertType.error:
-        alertIcon = Assets.icons.arrowUpRight.svg();
+        alertIcon = Assets.icons.alert.svg();
         //title = "Error";
         description = message;
         break;
@@ -70,6 +71,6 @@ class AppAlertDialog extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ).paddingSymmetric(horizontal: AppDimens.doublePadding);
   }
 }

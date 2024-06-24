@@ -30,7 +30,9 @@ class ActionIcon extends ConsumerWidget {
     return Column(
       children: [
         AppRoundedIcon(
-          iconImage: action.actionIcon.svg(color: isEqual ? Colors.white : null),
+          iconImage: action.actionIcon.svg(
+            color: isEqual ? Colors.white : null,
+          ),
           color: isEqual ? colorScheme.secondary : color,
           size: size,
           borderColor: borderColor,

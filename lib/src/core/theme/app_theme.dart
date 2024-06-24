@@ -28,9 +28,9 @@ class AppTheme {
             _textTheme(colorScheme: colorScheme).headlineMedium),
       ),
       appBarTheme: AppBarTheme(
-        color: colorScheme.surface,
+        color: Colors.transparent,
         elevation: 0,
-        toolbarHeight: AppDimens.smContainerSize/2,
+        toolbarHeight: AppDimens.smContainerSize * 1.2,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarBrightness: brightness,
           statusBarColor: Colors.transparent,

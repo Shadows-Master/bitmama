@@ -1,8 +1,10 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
+import 'package:bitmama/src/core/routing/app_router.dart';
 import 'package:bitmama/src/features/Wallets/domain/action.dart';
 import 'package:bitmama/src/features/Wallets/presentations/widgets/action_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../shared/constants/app_dimens.dart';
 
@@ -30,6 +32,7 @@ class ActionSizedBox extends ConsumerWidget {
               borderColor: color.onSurface,
             ).onTap((){
               ref.read(actionProvider.notifier).update((state) => action);
+              if (index == 1) GoRouter.of(context).pushNamed(AppRoutes.walletAddress.name);
             });
           })
 

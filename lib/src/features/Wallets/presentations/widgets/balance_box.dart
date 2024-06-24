@@ -1,7 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
+import 'package:bitmama/src/features/Wallets/presentations/widgets/app_title_icon.dart';
 import 'package:bitmama/src/shared/components/app_rounded_icon.dart';
 import 'package:bitmama/src/shared/components/app_title.dart';
-import 'package:bitmama/src/shared/constants/app_string.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../generated/assets.gen.dart';
@@ -32,22 +32,12 @@ class BalanceBox extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                children: [
-                  AppTitle.h2(
-                    title: AppString.balanceInfo,
-                    fontWeight: FontWeight.w200,
-                    color: color.outline,
-                  ),
-                  AppDimens.spacing.widthBox,
-                  Assets.icons.eye.svg(),
-                ],
-              ),
-              const AppTitle.h0(
+              AppTitleIcon(),
+              AppTitle.h0(
                 title: "\$1444.99",
                 fontWeight: FontWeight.bold,
               ),

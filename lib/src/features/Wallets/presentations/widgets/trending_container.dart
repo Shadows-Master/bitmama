@@ -31,7 +31,7 @@ class TrendingContainer extends StatelessWidget {
               TrendingItemTile(color: color),
               TrendingItemTile(
                 color: color,
-                cryptoTitle: AppString.trendingEth,
+                cryptoTitle: AppString.eth,
                 cryptoImage: Assets.icons.ethereumEth.svg(),
               ),
               TrendingItemTile(color: color),

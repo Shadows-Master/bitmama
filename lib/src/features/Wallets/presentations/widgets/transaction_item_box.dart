@@ -33,7 +33,7 @@ class TransactionItemTile extends StatelessWidget {
             ),
           ],
         ),
-        const Column(
+         const Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             AppTitle(title: AppString.amount),

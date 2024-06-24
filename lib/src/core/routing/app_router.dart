@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bitmama/src/features/Account/presentations/views/account_page_view.dart';
 import 'package:bitmama/src/features/Payments/presentations/views/payment_page_view.dart';
 import 'package:bitmama/src/features/Sells/presentations/views/sell_page_view.dart';
+import 'package:bitmama/src/features/Wallets/presentations/views/WalletAddress/presentation/views/wallet_address_page_view.dart';
 import 'package:bitmama/src/features/Wallets/presentations/views/wallet_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -27,6 +28,7 @@ enum AppRoutes {
   emailVerify,
   home,
   wallet,
+  walletAddress,
   payments,
   sell,
   account,
@@ -114,6 +116,14 @@ GoRouter appRouter(AppRouterRef ref) {
             ],
           ),
         ],
+      ),
+      GoRoute(
+        path: '/wallets-address',
+        name: AppRoutes.walletAddress.name,
+        parentNavigatorKey: _rootNavigatorKey,
+        pageBuilder: (context, state) {
+          return const NoTransitionPage(child: WalletAddressPageView());
+        },
       ),
     ],
   );
