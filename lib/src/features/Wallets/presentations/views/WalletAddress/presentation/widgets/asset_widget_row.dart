@@ -1,8 +1,9 @@
-import 'package:bitmama/src/features/Wallets/presentations/views/WalletAddress/domain/asset.dart';
+import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:bitmama/src/features/Wallets/presentations/views/WalletAddress/domain/network.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../shared/components/app_title.dart';
+import '../../../../../../../shared/constants/app_dimens.dart';
 
 class AssetWidgetRow extends StatelessWidget {
   const AssetWidgetRow({
@@ -10,13 +11,14 @@ class AssetWidgetRow extends StatelessWidget {
     required this.asset,
   });
 
-  final WalletAsset asset;
+  final dynamic asset;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
          asset.assetImage,
+        AppDimens.halfSpacing.widthBox,
         AppTitle(title: asset.title),
       ],
     );

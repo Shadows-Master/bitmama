@@ -6,6 +6,7 @@ import 'package:bitmama/src/shared/components/app_rounded_icon.dart';
 import 'package:bitmama/src/shared/constants/app_dimens.dart';
 import 'package:bitmama/src/shared/constants/app_string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -106,7 +107,12 @@ class AssetQrCodeWidget extends ConsumerWidget {
                 AppRoundedIcon(
                   iconImage: Assets.icons.copy.svg(),
                   hasBorder: false,
-                ).expanded()
+                ).expanded().onTap((){
+                  Clipboard.setData(const ClipboardData(text: 'https://${AppString.addressValue}'));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Copied to clipboard')),
+                  );
+                }),
               ],
             ).paddingSymmetric(
               horizontal: AppDimens.padding,

@@ -29,6 +29,8 @@ class AppString {
   static const String btc  = "BTC";
   static const String eth  = "ETH";
   static const String trx  = "TRX";
+  static const String mtn  = "MTN";
+  static const String ora  = "ORA";
   static const String name  = "Layi Wasabi";
   static const String date   = "Dec 11,2023.8:03al";
   static const String amount  = "+20.50 USD";

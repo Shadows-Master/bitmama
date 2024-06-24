@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:bitmama/src/shared/extensions/app_context_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../../../../generated/assets.gen.dart';
@@ -118,11 +119,16 @@ class ReceiveWalletAddress extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const AppTitle.h2(
-            title: 'https://${AppString.addressValue}',),
+            title: 'https://${AppString.addressValue}',).expanded(),
           AppRoundedIcon(
             iconImage: Assets.icons.copy.svg(),
             hasBorder: false,
-          )
+          ).onTap((){
+            Clipboard.setData(const ClipboardData(text: 'https://${AppString.addressValue}'));
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Copied to clipboard')),
+            );
+          })
         ],
       ).paddingSymmetric(
         vertical: AppDimens.padding,
