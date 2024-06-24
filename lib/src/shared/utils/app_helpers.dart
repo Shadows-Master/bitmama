@@ -1,18 +1,9 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:awesome_extensions/awesome_extensions.dart';
-import 'package:bitmama/src/shared/extensions/app_context_extension.dart';
-import 'package:cherry_toast/cherry_toast.dart';
-import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:toastification/toastification.dart';
 
-import '../components/app_title.dart';
-import '../constants/app_dimens.dart';
 
 class AppHelpers {
   AppHelpers._();
@@ -31,25 +22,6 @@ class AppHelpers {
     return NumberFormat.decimalPattern().format(number);
   }
 
-  static Future<File?> loadImageFromCamera() async {
-    final ImagePicker picker = ImagePicker();
-    final XFile? picture = await picker.pickImage(
-      source: ImageSource.camera,
-      maxWidth: 600,
-      maxHeight: 600,
-    );
-    return (picture != null) ? File(picture.path) : null;
-  }
-
-  static Future<File?> loadImageFromGallery() async {
-    final ImagePicker picker = ImagePicker();
-    final XFile? picture = await picker.pickImage(
-      source: ImageSource.gallery,
-      maxWidth: 600,
-      maxHeight: 600,
-    );
-    return (picture != null) ? File(picture.path) : null;
-  }
 
   static bool isMtn(String value) {
     return (value.startsWith('650') ||
@@ -95,38 +67,6 @@ class AppHelpers {
         break;
     }
     return idiom;
-  }
-
-  static toast(BuildContext context, String message) => Toastification().show(
-        context: context,
-        title: const AppTitle.h2(
-          title: "Success",
-          fontWeight: FontWeight.w700,
-        ).paddingOnly(top: AppDimens.halfPadding),
-        description: AppTitle(title: message),
-        type: ToastificationType.success,
-        style: ToastificationStyle.fillColored,
-        autoCloseDuration: 2.ms,
-        animationDuration: 2.microseconds,
-        alignment: Alignment.bottomCenter,
-        padding: const EdgeInsets.symmetric(
-            horizontal: AppDimens.padding, vertical: AppDimens.halfPadding),
-      );
-
-  static notify(BuildContext context, String message, {bool isSuccess = true}) {
-    isSuccess
-        ? CherryToast.success(
-            title: Text(message, style: context.headlineLarge),
-            toastPosition: Position.bottom,
-            borderRadius: AppDimens.borderRadius,
-            backgroundColor: context.colorScheme.surface,
-          ).show(context)
-        : CherryToast.warning(
-            title: Text(message, style: context.headlineLarge),
-            toastPosition: Position.bottom,
-            borderRadius: AppDimens.borderRadius,
-            backgroundColor: context.colorScheme.surface,
-          ).show(context);
   }
 
 
