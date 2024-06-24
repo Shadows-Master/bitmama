@@ -105,29 +105,7 @@ class WalletAddressPageView extends ConsumerWidget {
               ),
               (AppDimens.tripleSpacing * 1.8).heightBox,
               const AppTitle(title: AppString.depositLink),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: context.colorScheme.onSurface),
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(
-                    AppDimens.borderRadius,
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const AppTitle.h2(
-                        title: 'https://${AppString.addressValue}',),
-                    AppRoundedIcon(
-                      iconImage: Assets.icons.copy.svg(),
-                      hasBorder: false,
-                    )
-                  ],
-                ).paddingSymmetric(
-                  vertical: AppDimens.padding,
-                  horizontal: AppDimens.padding,
-                ),
-              ),
+              depositLinkContainer(context),
               const Spacer(),
               AppButton(
                 title: "Done",
@@ -141,5 +119,31 @@ class WalletAddressPageView extends ConsumerWidget {
         );
       },
     );
+  }
+
+  Container depositLinkContainer(BuildContext context) {
+    return Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: context.colorScheme.onSurface),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(
+                  AppDimens.borderRadius,
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const AppTitle.h2(
+                      title: 'https://${AppString.addressValue}',),
+                  AppRoundedIcon(
+                    iconImage: Assets.icons.copy.svg(),
+                    hasBorder: false,
+                  )
+                ],
+              ).paddingSymmetric(
+                vertical: AppDimens.padding,
+                horizontal: AppDimens.padding,
+              ),
+            );
   }
 }
