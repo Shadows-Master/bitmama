@@ -163,15 +163,15 @@ class SellPageView extends ConsumerWidget {
                   const AppTitle(title: "Payment Method"),
                   Assets.icons.chevronDown.svg(),
                 ],
-              ).paddingSymmetric(horizontal: AppDimens.doubleBorderRadius).onTap((){
-                _showGatewayBottomSheet(context, ref);
-              }),
-            ),
-
+              ).paddingSymmetric(horizontal: AppDimens.doubleBorderRadius),
+            ).onTap(() {
+              _showGatewayBottomSheet(context, ref);
+            }),
             AppDimens.doublePadding.heightBox,
-            AppButton(title: "convert", onPressed: gateway.isNull() ? null : (){
-
-            }, )
+            AppButton(
+              title: "convert",
+              onPressed: gateway.isNull() ? null : () {},
+            )
           ],
         ).paddingSymmetric(horizontal: AppDimens.tripleSpacing),
       ),
