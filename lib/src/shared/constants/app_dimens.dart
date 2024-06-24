@@ -10,7 +10,7 @@ class AppDimens {
   static const double doubleBorderRadius = 16.0;
 
   /// Text values
-  static const double h0 = 18.0;
+  static const double h0 = 30.0;
   static const double h1 = 16.0;
   static const double h2 = 14.0;
   static const double h3 = 12.0;

@@ -72,7 +72,7 @@ class IntroPageView extends ConsumerWidget {
                   final step = steps.elementAt(index);
                   return Column(
                     children: [
-                      step.illustration.image(scale: .2),
+                      step.illustration.image(scale: 1.2),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

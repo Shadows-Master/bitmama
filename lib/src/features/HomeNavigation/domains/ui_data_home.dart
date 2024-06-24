@@ -1,22 +1,30 @@
-import 'package:flutter/material.dart';
-
 import '../../../../generated/assets.gen.dart';
 
 class UiDataHome {
-  final String? label;
-  final Widget? icon;
-  final Widget? selectedIcon;
+  final String label;
+  final SvgGenImage icon;
 
   UiDataHome({
-    this.label,
-    this.icon,
-     this.selectedIcon,
+    required this.label,
+    required this.icon,
   });
 }
 
 final List<UiDataHome> data = [
-  UiDataHome(label: "Wallets", icon: Assets.icons.wallet.image(),),
-  UiDataHome(label: "Payment", icon: Assets.icons.receiptText.image(),),
-  UiDataHome(label: "Sell", icon: Assets.icons.cardSend.image(),),
-  UiDataHome(label: "Account", icon: Assets.icons.user.image(),),
+  UiDataHome(
+    label: "Wallets",
+    icon: Assets.icons.wallet,
+  ),
+  UiDataHome(
+    label: "Payment",
+    icon: Assets.icons.receiptText,
+  ),
+  UiDataHome(
+    label: "Sell",
+    icon: Assets.icons.cardSend,
+  ),
+  UiDataHome(
+    label: "Account",
+    icon: Assets.icons.user,
+  ),
 ];

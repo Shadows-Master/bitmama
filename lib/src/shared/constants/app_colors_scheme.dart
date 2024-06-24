@@ -19,7 +19,7 @@ class AppColorsScheme {
     onError: Color(0xFFF8F8F8),
     errorContainer: Color(0xFFF9DEDC),
     onErrorContainer: Color(0xFF410E0B),
-    outline: Color(0xFF24324D),
+    outline: Color(0xFF8D9091),
     surface: Color(0xFFFEF6F3),
     onSurface: Color(0xFFDDDEDE),
     surfaceContainerHighest: Color(0xFFE7E0EC),
@@ -28,7 +28,7 @@ class AppColorsScheme {
     onInverseSurface: Color(0xFFF4EFF4),
     inversePrimary: Color(0xFFD0BCFF),
     shadow: Color(0xFF000029),
-    surfaceTint: Color(0xFFF8F8F8),
+    surfaceTint: Color(0xFFFBF7F6),
     outlineVariant: Color(0xFFCAC4D0),
     scrim: Color(0xFFD1D4D8),
   );

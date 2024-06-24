@@ -8,128 +8,87 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/alert.png
-  AssetGenImage get alert => const AssetGenImage('assets/icons/alert.png');
+  /// File path: assets/icons/alert.svg
+  SvgGenImage get alert => const SvgGenImage('assets/icons/alert.svg');
 
-  /// File path: assets/icons/arrow-up-right.png
-  AssetGenImage get arrowUpRight => const AssetGenImage('assets/icons/arrow-up-right.png');
+  /// File path: assets/icons/arrow-up-right.svg
+  SvgGenImage get arrowUpRight => const SvgGenImage('assets/icons/arrow-up-right.svg');
 
-  /// File path: assets/icons/bell.png
-  AssetGenImage get bell => const AssetGenImage('assets/icons/bell.png');
+  /// File path: assets/icons/bell.svg
+  SvgGenImage get bell => const SvgGenImage('assets/icons/bell.svg');
 
-  /// File path: assets/icons/bitcoin-btc.png
-  AssetGenImage get bitcoinBtc => const AssetGenImage('assets/icons/bitcoin-btc.png');
+  /// File path: assets/icons/bitcoin-btc.svg
+  SvgGenImage get bitcoinBtc => const SvgGenImage('assets/icons/bitcoin-btc.svg');
 
-  /// File path: assets/icons/card-receive.png
-  AssetGenImage get cardReceive => const AssetGenImage('assets/icons/card-receive.png');
+  /// File path: assets/icons/card-send.svg
+  SvgGenImage get cardSend => const SvgGenImage('assets/icons/card-send.svg');
 
-  /// File path: assets/icons/card-send.png
-  AssetGenImage get cardSend => const AssetGenImage('assets/icons/card-send.png');
+  /// File path: assets/icons/check.svg
+  SvgGenImage get check => const SvgGenImage('assets/icons/check.svg');
 
-  /// File path: assets/icons/check.png
-  AssetGenImage get check => const AssetGenImage('assets/icons/check.png');
+  /// File path: assets/icons/ethereum-eth.svg
+  SvgGenImage get ethereumEth => const SvgGenImage('assets/icons/ethereum-eth.svg');
 
-  /// File path: assets/icons/chevron-down.png
-  AssetGenImage get chevronDown => const AssetGenImage('assets/icons/chevron-down.png');
+  /// File path: assets/icons/eye.svg
+  SvgGenImage get eye => const SvgGenImage('assets/icons/eye.svg');
 
-  /// File path: assets/icons/chevron-left.png
-  AssetGenImage get chevronLeft => const AssetGenImage('assets/icons/chevron-left.png');
+  /// File path: assets/icons/group.svg
+  SvgGenImage get group => const SvgGenImage('assets/icons/group.svg');
 
-  /// File path: assets/icons/close.png
-  AssetGenImage get close => const AssetGenImage('assets/icons/close.png');
+  /// File path: assets/icons/money-bag.svg
+  SvgGenImage get moneyBag => const SvgGenImage('assets/icons/money-bag.svg');
 
-  /// File path: assets/icons/copy.png
-  AssetGenImage get copy => const AssetGenImage('assets/icons/copy.png');
+  /// File path: assets/icons/money-recive.svg
+  SvgGenImage get moneyRecive => const SvgGenImage('assets/icons/money-recive.svg');
 
-  /// File path: assets/icons/document.png
-  AssetGenImage get document => const AssetGenImage('assets/icons/document.png');
+  /// File path: assets/icons/moneys.svg
+  SvgGenImage get moneys => const SvgGenImage('assets/icons/moneys.svg');
 
-  /// File path: assets/icons/dollar-square.png
-  AssetGenImage get dollarSquare => const AssetGenImage('assets/icons/dollar-square.png');
+  /// File path: assets/icons/plus.svg
+  SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
 
-  /// File path: assets/icons/ethereum-eth.png
-  AssetGenImage get ethereumEth => const AssetGenImage('assets/icons/ethereum-eth.png');
+  /// File path: assets/icons/receipt-text.svg
+  SvgGenImage get receiptText => const SvgGenImage('assets/icons/receipt-text.svg');
 
-  /// File path: assets/icons/eye.png
-  AssetGenImage get eye => const AssetGenImage('assets/icons/eye.png');
+  /// File path: assets/icons/swap.svg
+  SvgGenImage get swap => const SvgGenImage('assets/icons/swap.svg');
 
-  /// File path: assets/icons/group.png
-  AssetGenImage get group => const AssetGenImage('assets/icons/group.png');
+  /// File path: assets/icons/time.svg
+  SvgGenImage get time => const SvgGenImage('assets/icons/time.svg');
 
-  /// File path: assets/icons/money-bag.png
-  AssetGenImage get moneyBag => const AssetGenImage('assets/icons/money-bag.png');
+  /// File path: assets/icons/user.svg
+  SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
-  /// File path: assets/icons/money-recive.png
-  AssetGenImage get moneyRecive => const AssetGenImage('assets/icons/money-recive.png');
+  /// File path: assets/icons/versions.svg
+  SvgGenImage get versions => const SvgGenImage('assets/icons/versions.svg');
 
-  /// File path: assets/icons/money-send.png
-  AssetGenImage get moneySend => const AssetGenImage('assets/icons/money-send.png');
-
-  /// File path: assets/icons/moneys.png
-  AssetGenImage get moneys => const AssetGenImage('assets/icons/moneys.png');
-
-  /// File path: assets/icons/plus-dark.png
-  AssetGenImage get plusDark => const AssetGenImage('assets/icons/plus-dark.png');
-
-  /// File path: assets/icons/plus-light.png
-  AssetGenImage get plusLight => const AssetGenImage('assets/icons/plus-light.png');
-
-  /// File path: assets/icons/receipt-text.png
-  AssetGenImage get receiptText => const AssetGenImage('assets/icons/receipt-text.png');
-
-  /// File path: assets/icons/reload.png
-  AssetGenImage get reload => const AssetGenImage('assets/icons/reload.png');
-
-  /// File path: assets/icons/shield-security.png
-  AssetGenImage get shieldSecurity => const AssetGenImage('assets/icons/shield-security.png');
-
-  /// File path: assets/icons/snowflake.png
-  AssetGenImage get snowflake => const AssetGenImage('assets/icons/snowflake.png');
-
-  /// File path: assets/icons/time.png
-  AssetGenImage get time => const AssetGenImage('assets/icons/time.png');
-
-  /// File path: assets/icons/user.png
-  AssetGenImage get user => const AssetGenImage('assets/icons/user.png');
-
-  /// File path: assets/icons/versions.png
-  AssetGenImage get versions => const AssetGenImage('assets/icons/versions.png');
-
-  /// File path: assets/icons/wallet.png
-  AssetGenImage get wallet => const AssetGenImage('assets/icons/wallet.png');
+  /// File path: assets/icons/wallet.svg
+  SvgGenImage get wallet => const SvgGenImage('assets/icons/wallet.svg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [
+  List<SvgGenImage> get values => [
         alert,
         arrowUpRight,
         bell,
         bitcoinBtc,
-        cardReceive,
         cardSend,
         check,
-        chevronDown,
-        chevronLeft,
-        close,
-        copy,
-        document,
-        dollarSquare,
         ethereumEth,
         eye,
         group,
         moneyBag,
         moneyRecive,
-        moneySend,
         moneys,
-        plusDark,
-        plusLight,
+        plus,
         receiptText,
-        reload,
-        shieldSecurity,
-        snowflake,
+        swap,
         time,
         user,
         versions,
@@ -234,6 +193,68 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = true;
+
+  final String _assetName;
+
+  final Size? size;
+  final bool _isVecFormat;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    SvgTheme? theme,
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    return SvgPicture(
+      _isVecFormat
+          ? AssetBytesLoader(_assetName, assetBundle: bundle, packageName: package)
+          : SvgAssetLoader(_assetName, assetBundle: bundle, packageName: package),
+      key: key,
+      matchTextDirection: matchTextDirection,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      theme: theme,
+      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 

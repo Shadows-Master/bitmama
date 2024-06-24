@@ -11,5 +11,25 @@ class AppString {
   static const String sndStepDesc = "Buy and sell popular digital currencies like Bitcoin, Ethereum, Celo etc. and keep track of them in one place.";
   static const String thirdStepDesc = "Refer a friend and earn commissions on selected transactions that they complete. Terms and conditions apply";
 //End Onboard title and description text
+
+  //Wallets Strings
+  static const String greeting = "Hi,";
+  static const String defaultName  = "Oluwatosin";
+  static const String fullGreetings  = "$greeting $defaultName";
+  static const String balanceInfo  = "Balance in USD";
+  static const String account  = "Account";
+  static const String receive  = "Receive";
+  static const String send  = "Send";
+  static const String swap  = "Swap";
+  static const String trending  = "Trending";
+  static const String lastTransactions  = "Recent Transaction";
+  static const String moreTransactions  = "See all";
+  static const String trendingValue  = "+12.2%";
+  static const String trendingBtc  = "BTC";
+  static const String trendingEth  = "ETH";
+  static const String name  = "Layi Wasabi";
+  static const String date   = "Dec 11,2023.8:03al";
+  static const String amount  = "+20.50 USD";
+  static const String status  = "Completed";
 }
 

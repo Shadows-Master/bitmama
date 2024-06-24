@@ -36,17 +36,17 @@ class AppAlertDialog extends StatelessWidget {
     late String description;
     switch (_appAlertType) {
       case _AppAlertType.success:
-        alertIcon = Assets.icons.check.image();
+        alertIcon = Assets.icons.check.svg();
         //title = "Success";
         description = message;
         break;
       case _AppAlertType.error:
-        alertIcon = Assets.icons.close.image();
+        alertIcon = Assets.icons.arrowUpRight.svg();
         //title = "Error";
         description = message;
         break;
       case _AppAlertType.info:
-        alertIcon = Assets.icons.alert.image();
+        alertIcon = Assets.icons.alert.svg();
         //title = "Information";
         description = message;
         break;

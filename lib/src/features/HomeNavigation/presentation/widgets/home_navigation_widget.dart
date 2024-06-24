@@ -18,22 +18,23 @@ class HomeNavigationWidget extends StatelessWidget {
   final ValueChanged<int> onDestinationSelected;
   @override
   Widget build(BuildContext context) {
-
+    final color = context.colorScheme;
     return Scaffold(
       body: body.paddingOnly(top: AppDimens.padding),
       bottomNavigationBar: NavigationBar(
         selectedIndex: currentIndex,
         onDestinationSelected: onDestinationSelected,
-        backgroundColor: context.colorScheme.surface,
+        backgroundColor: Colors.white,
         elevation: 0.0,
         indicatorColor: Colors.transparent,
         indicatorShape: const CircleBorder(),
         destinations: [
           ...data.map(
             (e) => NavigationDestination(
-              icon: e.icon!,
-              label: e.label!,
+              icon: e.icon.svg(),
+              label: e.label,
               tooltip: e.label,
+              selectedIcon: e.icon.svg(color: color.secondary),
             ),
           )
         ],
